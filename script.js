@@ -1,7 +1,7 @@
 // Declare variables below to save the different divs of your story.
 let opening = document.querySelector(".story-opening");
 let openingText = document.querySelector("h1");
-let buttons = document.querySelector("button");
+let buttons = document.querySelectorAll("button");
 
 let button1 = document.querySelector(".option-one");
 let button2 = document.querySelector(".option-two");
@@ -23,6 +23,21 @@ option2.style.display = "none";
 option1End.style.display = "none";
 option2End.style.display = "none";
 
+document.addEventListener("keydown", function (event) {
+    if (event.key === "1") {
+        console.log("Button 1 clicked");
+        button1.click();
+    }
+    if (event.key === "2") {
+        button2.click();
+        console.log("Button 2 clicked");
+    }
+    if (event.key === "3") {
+        endButton.click();
+        console.log("End button clicked");
+    }
+});
+
 button1.addEventListener("click",
     function () {
         if (!button1Clicked) {
@@ -41,6 +56,9 @@ button1.addEventListener("click",
             option1End.style.display = "block";
             button1.style.display = "none";
             button2.style.display = "none";
+
+            button1.setAttribute("disabled", "disabled");
+            button2.setAttribute("disabled", "disabled");
         }
     });
 
@@ -61,11 +79,17 @@ button2.addEventListener("click",
             option2End.style.display = "block";
             button1.style.display = "none";
             button2.style.display = "none";
+
+            button1.setAttribute("disabled", "disabled");
+            button2.setAttribute("disabled", "disabled");
         }
     });
 
 endButton.addEventListener("click",
     function () {
+        button1.disabled = false;
+        button2.disabled = false;
+
         button1Clicked = false;
         button2Clicked = false;
 
@@ -85,22 +109,16 @@ endButton.addEventListener("click",
         button2.innerHTML = "Follow the book's recommended path.";
     });
 
-endButton.addEventListener("mouseover",
-    function () {
-        buttons.style.background = "black";
-        buttons.style.fontColor = "white";
+//endButton.addEventListener("mouseover",
+//  function () {
+//    buttons.style.backgroundColor = "black";
+//  buttons.style.color = "red";
+//});
 
-        opening.style.background = "black";
-        openingText.style.fontColor = "white";
-    });
-
-endButton.addEventListener("mouseout",
-    function () {
-        buttons.style.background = "#007bff";
-        buttons.style.fontColor = "white";
-
-        opening.style.background = "white";
-        openingText.style.fontColor = "black";
-    });
+//endButton.addEventListener("mouseout",
+//  function () {
+//    buttons.style.backgroundColor = "#007bff";
+//  buttons.style.color = "white";
+//});
 // });
 
