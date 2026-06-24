@@ -45,8 +45,8 @@ button1.addEventListener("click",
             option2.style.display = "none";
             option1.style.display = "block";
 
-            button1.innerHTML = "Continue down the hallway?";
-            button2.innerHTML = "Quickly check out the area?";
+            button1.innerHTML = "Continue down the hallway? (1)";
+            button2.innerHTML = "Quickly check out the area? (2)";
 
             button1Clicked = true;
         }
@@ -69,8 +69,8 @@ button2.addEventListener("click",
             option1.style.display = "none";
             option2.style.display = "block";
 
-            button1.innerHTML = "Hide from the librarian?";
-            button2.innerHTML = "Run away?";
+            button1.innerHTML = "Hide from the librarian? (1)";
+            button2.innerHTML = "Run away? (2)";
 
             button2Clicked = true;
         }
@@ -105,8 +105,8 @@ endButton.addEventListener("click",
         button1.style.justifyContent = "center";
         button2.style.justifyContent = "center";
 
-        button1.innerHTML = "No, move on.";
-        button2.innerHTML = "Follow the book's recommended path.";
+        button1.innerHTML = "No, move on. (1)";
+        button2.innerHTML = "Follow the book's recommended path. (2)";
     });
 
 //endButton.addEventListener("mouseover",
@@ -121,4 +121,3 @@ endButton.addEventListener("click",
 //  buttons.style.color = "white";
 //});
 // });
-

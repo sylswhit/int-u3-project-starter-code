@@ -15,31 +15,39 @@ html,
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Style the body with a background color or image if desired */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #aec1ff;
     text-align: center;
     padding: 20px;
 }
 
 img {
-    width: 400px
+    width: 400px;
+    transition: transform 0.9s ease-in-out;
+}
+
+img:hover {
+    transform: rotate(360deg);
 }
 
 /* Style the title of your story */
 .title {
-    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-shadow: rgba(0, 0, 0, 0.2)
 }
 
 /* Style the story opening container */
 .story-opening {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #fbdab3;
+    border: 1px solid #c78686;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -68,7 +76,7 @@ button {
     font-size: 16px;
     padding: 10px 20px;
     margin: 10px;
-    background-color: #007bff;
+    background-color: #c11f06;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -77,16 +85,24 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #dfa248;
 }
 
 /* Style the screens for option one and option two */
 .option-one-screen,
-.option-two-screen,
+.option-two-screen {
+    background-color: hsl(106, 89%, 89%);
+    border: 1px solid #94e18f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
 .option-one-end,
 .option-two-end {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: hsl(327, 74%, 77%);
+    border: 1px solid #581376;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
